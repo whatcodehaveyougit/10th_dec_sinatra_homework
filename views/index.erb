@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="/style.css">
-  </head>
-  <body>
 
     <h1>Screenings @ Codeclan</h1>
 
     <!-- @films is getting thrown to us here as an array of hashes -->
     <!-- So now we need to iterate through them -->
-
     <% for film in @films %>
     <a href="/film_info/<%= film.id %>"><br>
     <%= film.title  %>
     </a>
     <% end %>
-  </body>
-</html>
+
+    <br>
+    <br>
+    <br>
+
+    <a class="customers" href="http://localhost:4567/customers">Customers</a>
