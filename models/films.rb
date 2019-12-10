@@ -16,7 +16,7 @@ end
 def save()
   sql="INSERT INTO films
   (title, price)
-  VALUES ($1, $2) 
+  VALUES ($1, $2)
   RETURNING id"
   values = [@title, @price]
   film_save = SqlRunner.run(sql, values).first
@@ -32,6 +32,12 @@ end
     return films_showing.map {|films_hash| Film.new(films_hash)}
   end
 
+  def self.find_film_by_id(id)
+    sql = "SELECT * FROM films WHERE id = $1"
+    values = [id]
+    film = SqlRunner.run(sql, values)
+    return Film.new(film.first)
+  end
 # ========== UPDATE ===========
 
   def update
