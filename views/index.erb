@@ -6,17 +6,14 @@
     <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about_us">About</a></li>
-      </ul>
-    </nav>
+
+    <h1>Screenings @ Codeclan</h1>
+
     <!-- @films is getting thrown to us here as an array of hashes -->
     <!-- So now we need to iterate through them -->
 
     <% for film in @films %>
-    <a href="/film_info/<%= film.id %>">
+    <a href="/film_info/<%= film.id %>"><br>
     <%= film.title  %>
     </a>
     <% end %>

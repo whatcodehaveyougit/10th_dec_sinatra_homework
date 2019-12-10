@@ -3,9 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Joker</title>
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <%= @film_info.title %>
-    <%= @film_info.price %>
+    <p>Film Title: <%= @film_info.title %></p>
+    <p>Film price: £<%= @film_info.price %></p>
+    <a class="back_button" href="http://localhost:4567/"> << Go Back </a>
   </body>
 </html>
